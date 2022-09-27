@@ -36,6 +36,14 @@ class ListBuildScreen extends StatelessWidget {
             leading: Icon(Icons.home_work),
             title: Text('home'),
           ),
+          ListTile(
+            leading: Icon(Icons.home_work),
+            title: Text('home'),
+          ),
+          ListTile(
+            leading: Icon(Icons.home_work),
+            title: Text('home'),
+          ),
         ],
       )),
       body: ListView(
