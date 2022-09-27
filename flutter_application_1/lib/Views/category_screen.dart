@@ -46,62 +46,65 @@ class ListBuildScreen extends StatelessWidget {
           ),
         ],
       )),
-      body: ListView(
-        // crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          // Container(
-          //   height: 200,
-          //   width: 300,
-          //   color: Colors.amber,
-          // ),
-          // Container(
-          //   height: 200,
-          //   width: 300,
-          //   color: Colors.blue,
-          // ),
-          // Container(
-          //     // height: 200,
-          //     // width: 300,
-          //     // color: Colors.teal,
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView(
+          // crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            // Container(
+            //   height: 200,
+            //   width: 300,
+            //   color: Colors.amber,
+            // ),
+            // Container(
+            //   height: 200,
+            //   width: 300,
+            //   color: Colors.blue,
+            // ),
+            // Container(
+            //     // height: 200,
+            //     // width: 300,
+            //     // color: Colors.teal,
 
-          //     ),
-          GridView.builder(
-            shrinkWrap: true,
-            itemCount: categoryList.length,
-            gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                maxCrossAxisExtent: 200,
-                mainAxisSpacing: 20,
-                crossAxisSpacing: 20,
-                childAspectRatio: 1),
-            itemBuilder: (context, index) => Container(
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [
-                      categoryList[index].catColor.withOpacity(0.5),
-                      categoryList[index].catColor,
-                    ],
-                    begin: Alignment.topRight,
-                    end: Alignment.bottomRight,
+            //     ),
+            GridView.builder(
+              shrinkWrap: true,
+              itemCount: categoryList.length,
+              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                  maxCrossAxisExtent: 200,
+                  mainAxisSpacing: 20,
+                  crossAxisSpacing: 20,
+                  childAspectRatio: 1),
+              itemBuilder: (context, index) => Container(
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        categoryList[index].catColor.withOpacity(0.5),
+                        categoryList[index].catColor,
+                      ],
+                      begin: Alignment.topRight,
+                      end: Alignment.bottomRight,
+                    ),
+                    borderRadius: BorderRadius.circular(15),
                   ),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                // color: categoryList[index].catColor,
-                child: Text(
-                  categoryList[index].catName,
-                )),
-          ),
-          // ListView.builder(
-          //   itemCount: _mylist.length,
-          //   shrinkWrap: true,
+                  // color: categoryList[index].catColor,
+                  child: Text(
+                    categoryList[index].catName,
+                  )),
+            ),
+            // ListView.builder(
+            //   itemCount: _mylist.length,
+            //   shrinkWrap: true,
 
-          //   itemBuilder: (context, index) => (Container(
-          //     height: 200,
-          //     width: 200,
-          //     color: Colors.blue,
-          //   )),
-          // )
-        ],
+            //   itemBuilder: (context, index) => (Container(
+            //     height: 200,
+            //     width: 200,
+            //     color: Colors.blue,
+            //   )),
+            // )
+          ],
+        ),
       ),
     );
   }
