@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_application_1/Views/home_screen.dart';
 import 'package:flutter_application_1/utils/dummy_data_list.dart';
+import 'package:get/get.dart';
 
 class ListBuildScreen extends StatelessWidget {
   ListBuildScreen({Key? key}) : super(key: key);
@@ -33,12 +35,18 @@ class ListBuildScreen extends StatelessWidget {
               alignment: Alignment.center,
               child: CircleAvatar(radius: 50)),
           ListTile(
+            onTap: () {
+              Get.to(LoginScreen());
+            },
             leading: Icon(Icons.home_work),
             title: Text('home'),
           ),
           ListTile(
+            onTap: () {
+              Get.to(LoginScreen());
+            },
             leading: Icon(Icons.home_work),
-            title: Text('home'),
+            title: Text('LOG in'),
           ),
           ListTile(
             leading: Icon(Icons.home_work),
